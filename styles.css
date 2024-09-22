@@ -1,0 +1,478 @@
+/* General reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styling */
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e4c1c1;
+    box-sizing: border-box;
+}
+.content {
+    padding: 16px;
+    margin-bottom: 0;
+}
+
+p {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #00796b;
+}
+
+a:hover {
+    color: #004d40;
+}
+
+/* Header Styling */
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+}
+
+header > h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.8rem; /* Adjust font size as needed */
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 15px; /* Space between navigation items */
+    margin-right: 40px;
+}
+
+header nav ul li a {
+    color: white;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #00796b;
+    border-radius: 5px;
+}
+/* Sidebar Styling */
+.sidebar {
+    background-color: #00796b;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #004d40;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* Search bar styling inside the sidebar */
+.sidebar-search {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.sidebar-search input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded on the left side */
+    font-size: 1rem;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 4px;
+}
+
+.sidebar-search button {
+    padding: 8px 12px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded on the right side */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-search button:hover {
+    background-color: #00796b;
+}
+/* Main Content Styling */
+.content {
+    margin-left: 240px;
+    padding: 40px;
+    margin-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('./assets/images/telemedicine_background.jpg') no-repeat center center/cover;
+    color: #023e33;
+    padding: 100px 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the overlay does not exceed the hero section boundaries */
+    min-height: 60vh; /* Set a minimum height for the hero section */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+    z-index: 1; /* Ensures the overlay is behind the text */
+}
+
+.hero .hero-text {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+    color: #045f4e; /* Dark green text color */
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Adds a shadow to make the text stand out */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Adds a shadow to make the text stand out */
+}
+
+.hero-text a {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-text a:hover {
+    background-color: #00796b;
+}
+
+/* Key Features Section and Services Section */
+.feature-grid, .service-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.feature-item, .service-item {
+    flex: 1 1 100%;
+    max-width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover, .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f9f6; /* Slightly different background color on hover */
+}
+.services>h2, .key-features>h2, .about>h2{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Form Section (Find Doctors, Appointments, Registration, and Contact Us) */
+.find-doctors, .appointments, .registration-form, .contact {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the section */
+}
+
+/* Heading Styling for Forms */
+.find-doctors h2, .appointments h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styling for Forms */
+.find-doctors p, .contact p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Form Group Styling (shared across forms) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Button Styling (shared across forms) */
+.find-doctors-form button, .appointment-form button, .contact-form button {
+    padding: 10px 20px;
+    background-color: #004d40; /* Button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.find-doctors-form button:hover, .appointment-form button:hover, .contact-form button:hover {
+    background-color: #00796b; /* Darker button on hover */
+}
+/* About Us Section */
+.about {
+    background-color: #e0f2f1; /* Light teal background */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Default shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+}
+
+.about:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #004d40; /* Dark green text color */
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333; /* Text color */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0a9887;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.footer-info, .footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .content {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    header nav ul {
+        display: none; /* Hide the navigation */
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+        display: block;
+        background-color: #00796b;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px; /* Add margin to position it under the logo */
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+
+    /* Show the menu when hamburger is clicked */
+    input[type="checkbox"]:checked ~ nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: #004d40;
+        width: 100%;
+        position: relative;
+        padding: 20px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Feature and Services Section */
+    .feature-grid, .service-grid {
+        width: 90%;
+    }
+    .feature-item, .service-item {
+        width: 100%;
+        max-width: none;
+        margin: 4px auto;
+    }
+    .hero-text h2 {
+        font-size: 2rem; /* Adjust hero heading size for smaller screens */
+    }
+}
+
+/* Media Query for Mobile (480px and below) */
+@media (max-width: 480px) {
+    .content{
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header > h1 {
+        font-size: 1.4rem;
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    /* Adjust the hamburger for smaller screens */
+    .hamburger {
+        margin-left: 0;
+        margin-top: 10px; /* Ensure proper spacing below the logo */
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ nav ul {
+        display: block;
+    }
+    .hero {
+        width: 90%;
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem; /* Adjust hero heading size for small screens */
+    }
+    /* Feature and Services Section for mobile screens */
+    .feature-grid, .service-grid {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .feature-item, .service-item {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    footer, .find-doctors, .appointments, .register, .about, .contact{
+        width: 90%;
+        margin: 10px auto;
+    } 
+}

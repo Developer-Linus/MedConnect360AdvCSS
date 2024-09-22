@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConnect 360 - Telemedicine Platform</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1 href>MedConnect 360</h1>
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <nav class>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#appointment">Appointments</a></li>
+                <li><a href="#">Consultations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+         <!-- Search Bar -->
+    <form class="sidebar-search" action="#" method="GET">
+        <input type="text" name="search" placeholder="Search..." aria-label="Search">
+        <button type="submit">Search</button>
+    </form>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#services">Services Offered</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+            <li><a href="#login" class="btn-primary">Login</a></li>
+        </ul>
+    </aside>
+    <!-- Main Content Section -->
+    <main class="content">
+        
+        <!-- Hero Section with Background Image -->
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Connecting Patients with Healthcare Providers Anywhere</h2>
+                <p>Access healthcare services easily with MedConnect 360.</p>
+                <a href="#register">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Find Nearby Health Centers</h3>
+                    <p>Locate health centers near you using our location-based service.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Book Appointments</h3>
+                    <p>Easily book, reschedule, or cancel appointments with doctors.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Consult with Doctors Online</h3>
+                    <p>Connect with healthcare providers through secure online consultations.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Real-Time Notifications</h3>
+                    <p>Get instant updates and reminders for your appointments, upcoming consultations, and more through SMS and email notifications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Doctors Section -->
+        <section id="doctors" class="find-doctors">
+            <h2>Find Doctors</h2>
+            <p>Search for doctors based on your location and medical needs.</p>
+            <form action="#" method="POST" class="find-doctors-form">
+                <div class="form-group">
+                    <label for="location">Enter Your Location:</label>
+                    <input type="text" id="location" name="location" placeholder="e.g. Mombasa, Kenya">
+                </div>
+                <button type="submit">Search</button>
+            </form>
+        </section> 
+
+        <!-- Book an Appointment Section -->
+        <section id="appointment" class="appointments">
+            <h2>Book an Appointment</h2>
+            <form action="#" method="POST" class="appointment-form">
+                <div class="form-group">
+                    <label for="doctor">Select Doctor:</label>
+                    <select id="doctor" name="doctor">
+                        <option disabled selected>Select a Doctor</option>
+                        <option value="dr-jane">Dr. Jane Doe</option>
+                        <option value="dr-john">Dr. John Smith</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Select Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Select Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <!-- Registration Section -->
+        <section id="register" class="register">
+            <div class="registration-form">
+                <h2>Register for MedConnect360</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Register as:</label>
+                        <select id="role" name="role" required>
+                            <option disabled selected>Select your role</option>
+                            <option value="patient">Patient</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+                <p>Already have an account? <a href="#login">Login here</a>.</p>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section id="features" class = "key-features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Secure User Authentication</h3>
+                    <p>Users can securely log in and manage their profiles using robust authentication systems.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Location-Based Health Center Finder</h3>
+                    <p>Find nearby health centers using integrated location services based on your current location.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Appointment Scheduling and Management</h3>
+                    <p>Patients can easily book, reschedule, or cancel appointments with their preferred healthcare providers.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Virtual Consultations</h3>
+                    <p>Engage in virtual consultations with doctors through a secure and easy-to-use platform.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>MedConnect 360 was created to solve the critical healthcare challenges faced by remote communities in Africa. With a shortage of healthcare professionals and long distances to the nearest health centers, we provide a platform that delivers quality healthcare through virtual consultations and appointment booking systems, making healthcare accessible to all.</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-section" class="contact">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Reach out to us!</p>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer Section -->
+        <footer id="footer-contact" class="footer">
+            <div class="footer-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@medconnect360.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+            <p>&copy; 2024 MedConnect 360. All Rights Reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
